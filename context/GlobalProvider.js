@@ -8,7 +8,7 @@ const GlobalProvider = ({ children }) => {
 
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [user, setUser] = useState(true);
-    const [isLoading, setLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         getCurrentUser()
@@ -24,7 +24,7 @@ const GlobalProvider = ({ children }) => {
 
         .catch((error) => console.log(error))
         .finally(() => {
-            setLoading(false)
+            setIsLoading(false)
         })
     }, [])
 
